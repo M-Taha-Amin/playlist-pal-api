@@ -3,7 +3,6 @@ const app = express();
 const path = require('path');
 const routes = require('./routes/index');
 const cors = require('cors');
-require('dotenv').config();
 
 app.use(cors());
 app.use(express.json());
