@@ -6,7 +6,7 @@ const getPlaylistDuration = async (API_KEY, playlistId) => {
   const videoDurations = await Promise.all(
     videoIds.map(async id => await getVideoDuration(API_KEY, id))
   );
-  return videoDurations;
+  return videoDurations.filter(duration => duration !== null);
 };
 
 module.exports = { getPlaylistDuration };

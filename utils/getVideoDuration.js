@@ -10,7 +10,7 @@ const getVideoDuration = async (apiKey, videoId) => {
   });
 
   if (response.data.items.length === 0) {
-    return 'PT0M0S';
+    return null;
   }
 
   return response.data.items[0].contentDetails.duration;
