@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
   res.status(200).send(html);
 });
 
-router.get('/api/data', async (req, res, next) => {
+router.get('/data', async (req, res, next) => {
   const { apiKey, playlistId } = req.query;
   if (!apiKey || !playlistId) {
     res
