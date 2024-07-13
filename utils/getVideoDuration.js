@@ -8,9 +8,8 @@ const getVideoDuration = async (apiKey, videoId) => {
     part: 'contentDetails',
     fields: 'items/contentDetails/duration',
   });
-  if (response.data.items.length !== 0) {
-    return response.data.items[0].contentDetails.duration;
-  }
+
+  return response.data.items[0].contentDetails.duration;
 };
 
 module.exports = getVideoDuration;
