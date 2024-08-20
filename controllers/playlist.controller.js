@@ -1,5 +1,5 @@
-import { getVideoDuration } from '../lib/youtubeDataApi/getVideoDuration.js';
-import { getVideoIDs } from '../lib/youtubeDataApi/getVideoIDs.js';
+import { getVideoDuration } from '../lib/youtubeApi/getVideoDuration.js';
+import { getVideoIDs } from '../lib/youtubeApi/getVideoIDs.js';
 
 export const getPlaylistDuration = async (req, res) => {
   const { apiKey, playlistId } = req.body;
