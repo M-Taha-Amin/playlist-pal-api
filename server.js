@@ -6,11 +6,11 @@ import path from 'path';
 const app = express();
 const __dirname = path.resolve();
 
+app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/playlist', playlistRoutes);
-app.use(express.static(path.resolve(__dirname, 'public')));
 
 app.get('*', (req, res) => {
   res.redirect('/');
